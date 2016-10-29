@@ -1,0 +1,21 @@
+package Arrays;
+
+public class FindParisOfSum {
+	
+	public static void main(String args[]){
+			
+		int[] intArray = {3,5,6,1,2,9,6,7,0};
+		int sumNumber = 9;
+		int pair;
+		
+		for(int i=0; i < intArray.length; i++){
+			pair = sumNumber-intArray[i];
+			if((intArray.)
+			{
+				
+			}
+		}
+		
+	}
+
+}

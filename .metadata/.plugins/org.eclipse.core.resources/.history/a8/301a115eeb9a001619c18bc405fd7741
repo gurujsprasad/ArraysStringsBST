@@ -1,0 +1,30 @@
+package Sorting;
+
+public class QuickSort {
+
+	public static void main (String args[]){
+		int [] nums = {3,8,1,4,6,8,6,9,6,1};
+		quickSort (nums, 0, nums[nums.length-1]);
+		
+	}
+
+	private static void quickSort(int[] nums, int p, int r) {
+		
+		if (p<r){
+			int q = partition(nums,p, r);
+			quickSort(nums,p, q-1);
+			quickSort(nums, q+1, r);
+		}
+	}
+
+	private static int partition(int[] nums, int i, int j) {
+		
+		int pivot = nums[j];
+		
+		
+		
+		return 0;
+	}
+	
+	
+}

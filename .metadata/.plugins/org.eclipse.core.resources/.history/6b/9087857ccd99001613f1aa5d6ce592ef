@@ -1,0 +1,28 @@
+package Arrays;
+
+import java.util.Arrays;
+import java.util.Iterator;
+import java.util.LinkedHashSet;
+
+public class DupplicateInArray {
+
+	
+	public static void main (String args [])
+	{
+		int [] intArray = {22,28,30,31,30,28};
+		Arrays.sort(intArray);
+		LinkedHashSet< Integer> noDuplicates = new LinkedHashSet<>();
+		for (int i = 0; i < intArray.length-1 ; i++)
+		{
+			System.out.println(intArray[i]);
+			noDuplicates.add(intArray[i]);
+		}
+		Iterator<Integer> it = noDuplicates.iterator();
+		System.out.println("\n");
+		while(it.hasNext())
+		{
+			System.out.println(it.next());
+		}
+	}
+	
+}

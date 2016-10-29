@@ -1,0 +1,68 @@
+package BinarySearchTree;
+
+public class BST {
+
+	Node root;
+	
+	public BST()
+	{
+		this.root = null;
+	}
+	
+	public static void main (String args[]){
+		
+		int elements [] = {1,5,10,2,3,8,9,6,4};
+		BST bst = new BST(); 
+		insertTree(bst,elements);
+		preOrderTraversal(bst.root);
+		
+	}
+
+	
+	public static void preOrderTraversal(Node node){
+	
+		if(node != null){
+			preOrderTraversal(node.left);
+			preOrderTraversal(node.right);
+			System.out.println(node.data+"-");
+			
+		}
+	}
+	
+	private static void insertTree(BST bst, int[] elements) {
+		// TODO Auto-generated method stub
+		Node y = null;
+		Node next;
+		Node newNode;
+		for (int i = 0; i < elements.length; i++){
+			y =null;
+			next = bst.root;
+			if (bst.root == null){
+				System.out.println("Creating a new Tree with root node as:"+elements[i]);
+				newNode = new Node(elements[0]);
+				bst.root = newNode;
+				continue;
+			}
+			while (next != null){
+				y = next;
+				if (next.data > elements[i] ){
+					next = next.left;
+				}
+				else{
+					next = next.right;
+				}
+			}
+			newNode = new Node(elements[i]);
+			newNode.parent = y;
+			if(newNode.data < y.data){
+				y.left = newNode;
+			}
+			else{
+				y.right = newNode;
+			}
+			
+		}
+	}
+	
+	
+}

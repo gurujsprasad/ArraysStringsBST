@@ -1,0 +1,44 @@
+package Sorting;
+
+public class QuickSort {
+
+	public static void main (String args[]){
+		int [] nums = {3,8,1,4,6,8,6,9,6,1};
+		quickSort (nums, 0, nums[nums.length-1]);
+		
+	}
+
+	private static void quickSort(int[] nums, int p, int r) {
+		
+		if (p<r){
+			int q = partition(nums,p, r);
+			quickSort(nums,p, q-1);
+			quickSort(nums, q+1, r);
+		}
+	}
+
+	private static int partition(int[] nums, int p, int r) {
+		
+		int pivot = nums[r];
+		int i = p-1;
+		for(int j = p; j < r ; j ++ ){
+	
+			if (nums[j] <= nums[r] ){
+				
+				i = i + 1;
+				int temp = nums[i];
+				nums[i]= nums[j];
+				nums[j] = temp;
+				
+			}
+			int temp = nums[i+1];
+			num[i+1] = nums[r];
+			nums[r] = temp;
+		}
+		
+		
+		return 0;
+	}
+	
+	
+}

@@ -1,0 +1,39 @@
+package Strings;
+
+import java.util.HashSet;
+
+public class LongestUniqueSubString {
+
+	public static void main (String args[])
+	{
+		String string = "aabcdefgguhjklmnbv";
+		HashSet<Character> set = new HashSet<>();
+		
+		int frontIndex = 0;
+		int maxSubLength = 0;
+		int curSubLength = 0;
+		
+		for (int i = 0; i < string.length(); i++){
+			 //if char is already present in the set
+				 //then check whether
+			if (set.contains(string.charAt(i))){
+				
+				curSubLength = i - frontIndex;
+				if(maxSubLength < curSubLength)
+				{
+					maxSubLength = curSubLength;
+				}
+				set = new HashSet<>();
+				frontIndex = i;
+				set.add(string.charAt(i));
+			}
+			else
+			{
+				set.add(string.charAt(i));
+			}
+		}
+		System.out.println(maxSubLength);
+	}
+	
+	
+}

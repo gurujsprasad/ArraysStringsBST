@@ -1,0 +1,12 @@
+package BinarySearchTree;
+
+public class BST {
+
+	public static void main (String args[]){
+		
+		int elements [] = {1,5,10,2,3,8,9,6,4};
+		
+	}
+	
+	
+}

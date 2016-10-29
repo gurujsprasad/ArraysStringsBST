@@ -1,0 +1,15 @@
+package Arrays;
+
+public class DupplicateInArray {
+
+	
+	public static void main (String args [])
+	{
+		int [] intArray = {22,28,30,31,30,28};
+		for (int ele : intArray)
+		{
+			System.out.println(ele);
+		}
+	}
+	
+}
